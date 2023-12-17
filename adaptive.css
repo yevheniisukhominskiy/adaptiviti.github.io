@@ -1,0 +1,158 @@
+@media screen and (min-width: 375px) and (max-width: 730px) {
+    .grid {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "percolator percolator percolator"
+        "cards cards cards"
+        "footer footer footer";
+        grid-gap: 0.5rem;
+        background-color: #ffffff;
+    }
+    
+    header {
+        width: 100%;
+        height: calc(10vh - 1rem);
+    }
+    
+    .percolator {
+        width: 100%;
+        height: calc(25vh - 1rem);
+    }
+    
+    .percolator .h3 {
+        display: none;
+    }
+    
+    .filters-button {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .cards {
+        width: 100%;
+        height: calc(55vh + 1rem);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 20vh);
+    }
+    
+    .image {
+        grid-area: image;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image img {
+        object-fit: cover;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        width: 25%; 
+        height: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    footer {
+        width: 100%;
+        height: 10vh;
+    }
+    
+    .cards .card:nth-last-child(-n+6) {
+        display: none;
+    }
+    .text {
+        display: none;
+    }
+    
+    .description {
+        display: none;
+    }
+}
+
+@media (min-width: 730px) and (max-width: 1200px) {
+    .grid {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "percolator percolator percolator"
+        "cards cards cards"
+        "footer footer footer";
+        grid-gap: 0.5rem;
+        background-color: #ffffff;
+    }
+    
+    header {
+        width: 100%;
+        height: calc(10vh - 1rem);
+    }
+    
+    .percolator {
+        width: 100%;
+        height: calc(20vh - 1rem);
+    }
+    
+    .percolator h3 {
+        display: none;
+    }
+    
+    .filters-button {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .cards {
+        width: 100%;
+        height: calc(60vh + 1rem);
+        grid-template-rows: repeat(3, 30vh);
+    }
+    
+    .description {
+        display: none;
+    }
+    
+    .card {
+        grid-template-areas: 
+        "image image image"
+        "text text text";
+    }
+    
+    .image {
+        grid-area: image;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .image img {
+        object-fit: cover;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        width: 100%; 
+        height: 60%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    .text {
+        margin-top: -7rem;
+        grid-area: text;
+        padding: 0.5rem;
+    }
+    
+    .cards .card:nth-last-child(-n+3) {
+        display: none;
+    }
+    
+    
+    footer {
+        width: 100%;
+        height: 10vh;
+    }
+}
